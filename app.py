@@ -132,3 +132,7 @@ def detect_voice(
         "confidenceScore": round(confidence_score, 4),
         "explanation": generate_explanation(classification, aggregated)
     }
+
+@app.get("/")
+def root():
+    return {"status": "ok"}
