@@ -133,6 +133,6 @@ def detect_voice(
         "explanation": generate_explanation(classification, aggregated)
     }
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {"status": "ok"}
